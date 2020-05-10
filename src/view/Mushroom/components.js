@@ -73,6 +73,10 @@ export const Table = styled.table`
   }
 `;
 
+export const LightCol = styled.td`
+  background-color: #130156;
+`;
+
 export const TCellHead = styled.td`
   border-right: 1px solid ${borderColor};
 `;

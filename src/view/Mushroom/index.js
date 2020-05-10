@@ -17,6 +17,7 @@ import {
   AccordionItemTitle,
   AccordionContent,
   Table,
+  LightCol,
   TCellHead,
 } from "./components";
 
@@ -270,13 +271,13 @@ function Mushroom() {
             <Table>
               <tbody>
                 <tr>
-                  <td></td>
-                  <td colSpan={titleColSpan}>选择时间段</td>
-                  <td colSpan={titleColSpan}>2020-04-01</td>
-                  <td colSpan={titleColSpan}>2020-04-01</td>
-                  <td colSpan={titleColSpan}>数据数量:100</td>
-                  <td colSpan={titleColSpan}>批次:100</td>
-                  <td colSpan={stages.length - 5 * titleColSpan}>
+                  <LightCol></LightCol>
+                  <LightCol colSpan={titleColSpan}>选择时间段</LightCol>
+                  <LightCol colSpan={titleColSpan}>2020-04-01</LightCol>
+                  <LightCol colSpan={titleColSpan}>2020-04-01</LightCol>
+                  <LightCol colSpan={titleColSpan}>数据数量:100</LightCol>
+                  <LightCol colSpan={titleColSpan}>批次:100</LightCol>
+                  <LightCol colSpan={stages.length - 5 * titleColSpan}>
                     选择批次:
                     <select
                       value={currBatch.id || ""}
@@ -296,7 +297,7 @@ function Mushroom() {
                         ></option>
                       ))}
                     </select>
-                  </td>
+                  </LightCol>
                 </tr>
                 <tr>
                   <td>批次</td>
@@ -306,9 +307,9 @@ function Mushroom() {
                   </td>
                 </tr>
                 <tr>
-                  <td>阶段</td>
+                  <LightCol>阶段</LightCol>
                   {stages.map((stage) => (
-                    <td key={stage.id}>{stage.stageName}</td>
+                    <LightCol key={stage.id}>{stage.stageName}</LightCol>
                   ))}
                 </tr>
                 <tr>
@@ -320,11 +321,11 @@ function Mushroom() {
                     ))}
                 </tr>
                 <tr>
-                  <td>序号</td>
+                  <LightCol>序号</LightCol>
                   {Array(stages.length)
                     .fill(0)
                     .map((_, i) => (
-                      <td key={i}>{i + 1}</td>
+                      <LightCol key={i}>{i + 1}</LightCol>
                     ))}
                 </tr>
                 <tr>
@@ -342,7 +343,7 @@ function Mushroom() {
                   {Array(stages.length)
                     .fill(0)
                     .map((_, i) => (
-                      <td key={i}>{i + 1}</td>
+                      <LightCol key={i}>{i + 1}</LightCol>
                     ))}
                 </tr>
                 <tr>
